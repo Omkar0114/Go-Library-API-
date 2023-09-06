@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: restapi-deployment
+  name: restapi-deployment
+  namespace: restapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: restapi-deployment
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: restapi-deployment
+    spec:
+      containers:
+      - image: omkar0114/library:0.1.0
+        name: library
+        env:
+         - name: DB_HOST
+           valueFrom:
+             configMapKeyRef:
+               name: restapi-cm
+               key: host
+         - name: DB_NAME
+           valueFrom:
+             configMapKeyRef:
+               name: restapi-cm
+               key: dbname
+         - name: DB_PASS
+           valueFrom:
+             secretKeyRef:
+               name: mysql-password
+               key: mysqlrootpassword
+        resources: {}
+status: {}
