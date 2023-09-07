@@ -5,7 +5,7 @@
 # Architecture of API & Kubernetes 
 ![image](https://github.com/Omkar0114/Go-Library-API-/assets/88308267/9018ab3f-a1d6-4e74-b7dc-430da8c21d44)
 
-# Prerequisites you need
+# Prerequisites
 - [Golang](https://go.dev/)
 - [Docker](https://www.docker.com/)
 - [Kubernetes cluster (Minikube or Kubeadm)](https://kubernetes.io/)
