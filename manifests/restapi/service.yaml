@@ -1,0 +1,33 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2023-09-07T14:17:22Z"
+    labels:
+      app: restapi
+    name: restapi-svc
+    namespace: restapi
+    resourceVersion: "62939"
+    uid: 102f794c-ad2f-487c-9ce9-7cfb6046cd6e
+  spec:
+    clusterIP: 10.103.145.251
+    clusterIPs:
+    - 10.103.145.251
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 8080
+      protocol: TCP
+      targetPort: 8080
+    selector:
+      app: restapi
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+kind: List
+metadata:
+  resourceVersion: ""
