@@ -3,20 +3,20 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: restapi-deployment
-  name: restapi-deployment
+    app: restapi
+  name: restapi
   namespace: restapi
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: restapi-deployment
+      app: restapi
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: restapi-deployment
+        app: restapi
     spec:
       containers:
       - image: omkar0114/library:0.1.0
